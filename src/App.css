@@ -80,6 +80,11 @@ input:focus{
     margin-left: 10px;
     font-size: 1.3rem;
 }
+.loadingText{
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin: 100px 0;
+}
 /* header */
 .mainTitle{
     font-size: 3rem;
