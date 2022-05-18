@@ -1,8 +1,13 @@
 //icons
 import { Icon } from '@iconify/react';
+//hooks
+import { useState } from 'react';
 
 
 const Controls = () => {
+
+    const [isGrid, setIsGrid] = useState(false)
+
     return (
         <form className="controlsForm" onSubmit={(e) => e.preventDefault()}>
             <div className="innerControlsForm">
@@ -16,6 +21,9 @@ const Controls = () => {
                     </button>
                 </div>
             </div>
+            {isGrid ? <Icon className='layoutIcon' icon="akar-icons:grid" onClick={() => setIsGrid(!isGrid)} />
+                : <Icon className='layoutIcon' icon="mi:three-rows" onClick={() => setIsGrid(!isGrid)} />
+            }
         </form>
     );
 }

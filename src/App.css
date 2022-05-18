@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6{
 body{
     color: var(--black);
     font-size: 1.1rem;
+    letter-spacing: 1px;
     font-family: var(--open-sans);
     background-color: var(--mintcream);
 }
@@ -37,17 +38,18 @@ body::after{
     width: 100%;
     height: 100%;
     background-color: #F5FFFA;
-opacity: 0.1;
-background-image: radial-gradient(circle at center center, #AAF0D1, #F5FFFA), repeating-radial-gradient(circle at center center, #AAF0D1, #AAF0D1, 20px, transparent 40px, transparent 20px);
-background-blend-mode: multiply;
+    opacity: 0.1;
+    background-image: radial-gradient(circle at center center, #AAF0D1, #F5FFFA), repeating-radial-gradient(circle at center center, #AAF0D1, #AAF0D1, 20px, transparent 40px, transparent 20px);
+    background-blend-mode: multiply;
 }
 .container{
     background-color: var(--white);
-    height: 100vh;
+    height: 100%;
     margin: 0 auto;
     width: 80%;
     max-width: 1920px;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
 }
 button{
     display: flex;
@@ -93,12 +95,13 @@ input:focus{
     text-align: center;
     border-bottom: 5px solid var(--black);
 }
-/* form */
+/* controls */
 .controlsForm{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px 0;
+    padding:  50px 0 100px 0;
 }
 .innerControlsForm{
     display: flex;
@@ -114,9 +117,92 @@ input:focus{
 .controlsButtonsContainer button{
     margin-right: 5px;
     background-color: var(--light-green);
+    transition: all 0.2s ease-in-out;
 }
+.controlsButtonsContainer button:hover{
+    background-color: var(--mintcream);
+}
+.layoutIcon{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.layoutIcon:hover{
+    color: var(--medium-green);
+}
+/* countries container */
+.countriesContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom:100px ;
+}
+/* box */
+.box{
+    display: flex;
+    width: 100%;
+    background-color: white;
+    border-top: 2px solid var(--black);
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+}
+.box:hover{
+    transform: scale(1.05);
+    border-bottom: 2px solid var(--black);
+    border-left: 2px solid var(--black);
+    border-right: 2px solid var(--black);
+}
+.flagContainer{
+    width: 100%;
+    max-width: 300px;
+    min-width: 200px;
+    border-right: 1px solid var(--black);
+}
+.flagContainer img{
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+.countryInfo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.countryName{
+    font-size: 1.8rem;
+}
+.countryCapital{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+}
+.countryCapitalIcon{
+    font-size: 1.5rem;
+    margin-right:5px;
+}
+/* animations */
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* media queries */
 @media(max-width:1200px){
     .container{
         width: 100%;
     }
 }
+
