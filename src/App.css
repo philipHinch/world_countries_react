@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Skranji&display=swap');
+/* css reset */
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* css variables */
+:root{
+    /* fonts */
+    --open-sans: 'Open Sans', sans-serif;
+    --skranji:'Skranji', cursive;
+    /* colors */
+    --white:#f6f6f6;
+    --black:#303030;
+    --mintcream:#F5FFFA;
+    --light-green:#AAF0D1;
+    --medium-green:#3EB489;
+    --bright-green:#98FF98;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* general */
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--skranji);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body{
+    color: var(--black);
+    font-size: 1.1rem;
+    font-family: var(--open-sans);
+    background-color: var(--mintcream);
 }
-
-.App-link {
-  color: #61dafb;
+body::after{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: #F5FFFA;
+opacity: 0.1;
+background-image: radial-gradient(circle at center center, #AAF0D1, #F5FFFA), repeating-radial-gradient(circle at center center, #AAF0D1, #AAF0D1, 20px, transparent 40px, transparent 20px);
+background-blend-mode: multiply;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container{
+    background-color: var(--white);
+    height: 100vh;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1920px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: inherit;
+    background-color: transparent;
+    padding: 10px 20px;
+    border: 1px solid var(--black);
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+input{    
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: white;
+    color: inherit;
+    font-size: 1.4rem;
+    padding: 10px;
+    outline: none;
+    border-style: solid;
+}
+input:focus{
+    border-color:var(--medium-green) ;
+}
+.arrowIcon{
+    margin-left: 10px;
+    font-size: 1.3rem;
+}
+/* header */
+.mainTitle{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--mintcream);
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--black); */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    background: url('./assets/images/green-goblin.png');
+    background-position: center;
+    padding: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+    border-bottom: 5px solid var(--black);
+}
+/* form */
+.controlsForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+}
+.innerControlsForm{
+    display: flex;
+    flex-direction: column;
+}
+#searchInput{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.controlsButtonsContainer{
+    display: flex;
+}
+.controlsButtonsContainer button{
+    margin-right: 5px;
+    background-color: var(--light-green);
+}
+@media(max-width:1200px){
+    .container{
+        width: 100%;
+    }
 }
