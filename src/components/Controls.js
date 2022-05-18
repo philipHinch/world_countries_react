@@ -19,6 +19,8 @@ const Controls = () => {
                     </button>
                     <button className="btn populationBtn">population <Icon className='arrowIcon populationArrowIcon' icon="bx:arrow-from-top" />
                     </button>
+                    <button className="btn areaBtn">area <Icon className='arrowIcon populationArrowIcon' icon="bx:arrow-from-top" />
+                    </button>
                 </div>
             </div>
             {isGrid ? <Icon className='layoutIcon' icon="akar-icons:grid" onClick={() => setIsGrid(!isGrid)} />

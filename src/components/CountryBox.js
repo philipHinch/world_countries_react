@@ -2,7 +2,8 @@
 import { Icon } from '@iconify/react';
 
 
-const CountryBox = ({ name, capital, flag }) => {
+const CountryBox = ({ name, capital, area, population, region, flag }) => {
+
     return (
         <div className="countryBox box">
             <div className="flagContainer">
@@ -17,12 +18,16 @@ const CountryBox = ({ name, capital, flag }) => {
                     <small>{capital}</small>
                 </div>
                 <div className="countryArea">
-                    <small><Icon className='countryAreaIcon' icon="map:city-hall" /></small>
-                    <small>{capital}</small>
+                    <small>{area && area.toLocaleString()} km&sup2;</small>
+                    <small><Icon className='countryAreaIcon' icon="bx:area" /></small>
                 </div>
                 <div className="countryPopulation">
-                    <small><Icon className='countryPopulationIcon' icon="map:city-hall" /></small>
-                    <small>{capital}</small>
+                    <small><Icon className='countryPopulationIcon' icon="fluent:people-team-28-filled" /></small>
+                    <small>{population.toLocaleString()}</small>
+                </div>
+                <div className="countryRegion">
+                    <small>{region}</small>
+                    <small><Icon className='countryRegionIcon' icon="bx:world" /></small>
                 </div>
             </div>
         </div>

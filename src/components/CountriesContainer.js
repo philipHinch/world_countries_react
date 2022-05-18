@@ -29,7 +29,7 @@ const CountriesContainer = () => {
     return (
         <main className="countriesContainer">
             {data && data.map(country => (
-                <CountryBox key={country.name} name={country.name} capital={country.capital} flag={country.flags.svg} />
+                <CountryBox key={country.name} name={country.name} capital={country.capital} area={country.area} population={country.population} region={country.region} flag={country.flags.svg} />
             ))}
         </main>
     );

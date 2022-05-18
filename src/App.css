@@ -161,6 +161,8 @@ input:focus{
     width: 100%;
     max-width: 300px;
     min-width: 200px;
+    min-height: 195px;
+    max-height: 195px;
     border-right: 1px solid var(--black);
 }
 .flagContainer img{
@@ -185,11 +187,50 @@ input:focus{
     left: 10px;
     display: flex;
     align-items: center;
+    opacity: 0.4;
+    font-weight: 700;
+
 }
-.countryCapitalIcon{
+.countryPopulation{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    opacity: 0.4;
+    font-weight: 700;
+
+}
+.countryArea{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    opacity: 0.4;
+    font-weight: 700;
+
+}
+.countryRegion{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    opacity: 0.4;
+    font-weight: 700;
+
+}
+.countryCapitalIcon,.countryAreaIcon, .countryPopulationIcon,.countryRegionIcon{
     font-size: 1.5rem;
     margin-right:5px;
+    color: var(--medium-green);
+    color: var(--black);
 }
+.countryRegionIcon, .countryAreaIcon{
+    margin-left: 5px;
+}
+
 /* animations */
 @keyframes fadeIn {
     0%{
