@@ -5,6 +5,11 @@ export const Reducer = (state, action) => {
                 ...state,
                 data: action.payload
             }
+        case 'SET_SEARCH_VALUE':
+            return {
+                ...state,
+                searchValue: action.payload
+            }
         case 'SET_THEME':
             return {
                 ...state,
