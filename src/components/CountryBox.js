@@ -13,19 +13,19 @@ const CountryBox = ({ name, capital, area, population, region, flag }) => {
                 <img src={flag} alt={name + ' ' + 'flag'} />
             </div>
             <div className="countryInfo">
-                <div className="countryCapital">
+                <div className="countryCapital" title='Capital'>
                     <small><Icon className='countryCapitalIcon' icon="map:city-hall" /></small>
                     <small>{capital}</small>
                 </div>
-                <div className="countryArea">
+                <div className="countryArea" title='Area'>
                     <small><Icon className='countryAreaIcon' icon="bx:area" /></small>
                     <small>{area && area.toLocaleString()} km&sup2;</small>
                 </div>
-                <div className="countryPopulation">
+                <div className="countryPopulation" title='Population'>
                     <small><Icon className='countryPopulationIcon' icon="fluent:people-team-28-filled" /></small>
                     <small>{population.toLocaleString()}</small>
                 </div>
-                <div className="countryRegion">
+                <div className="countryRegion" title='Region'>
                     <small><Icon className='countryRegionIcon' icon="bx:world" /></small>
                     <small>{region}</small>
                 </div>
