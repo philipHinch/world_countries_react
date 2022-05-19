@@ -15,6 +15,10 @@ LINK
 - asynchronus programming
 - css animations
 
+## What I've learnt:
+
+- Do not modify original data. I found out that filtering the original data and then saving it back to context was not a good idea.
+
 PREVIEWS
 
 
