@@ -4,57 +4,12 @@ import Spinner from "./Spinner";
 //context
 import { Context } from "../context/Context";
 //hooks
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 
 const CountriesContainer = ({ isSearching }) => {
 
     const context = useContext(Context)
-    const { dispatch, data, searchValue, isLoading } = context
-
-    // //get data on page load 
-    // useEffect(() => {
-    //     getCountriesData()
-    // }, [])
-
-    // //gets, formats and sets data to context
-    // const getCountriesData = async () => {
-    //     try {
-    //         //get data
-    //         const res = await fetch(`${ process.env.REACT_APP_ENDPOINT }`)
-    //         const data = await res.json()
-    //         //format data
-    //         const newData = formatData(data)
-    //         //send data to context
-    //         dispatch({ type: 'SET_DATA', payload: newData })
-    //         dispatch({ type: 'SET_IS_LOADING', payload: false })
-    //     } catch (error) {
-    //         dispatch({ type: 'SET_IS_LOADING', payload: false })
-    //         console.log(error);
-    //     }
-    // }
-
-    // //this formats the data from the api
-    // const formatData = (arr) => {
-    //     //replace Å with A (aland islands)
-    //     let formattedData = [
-    //         ...arr,
-    //         arr[1].name = 'Aland Islands'
-    //     ]
-    //     formattedData.pop()
-    //     //if no capital, add capital= 'N/A'
-    //     formattedData.map(item => {
-    //         if (!item.capital) {
-    //             item.capital = 'N/A'
-    //         }
-    //         if (!item.area) {
-    //             item.area = 0
-    //         }
-    //     })
-    //     //sort the original data (original data is not sorted properly)
-    //     let sortedNewArr = formattedData.sort((a, b) => b.name < a.name ? 1 : -1)
-    //     return sortedNewArr
-    // }
-
+    const { data, searchValue, isLoading } = context
 
     return (
         <main className="countriesContainer">

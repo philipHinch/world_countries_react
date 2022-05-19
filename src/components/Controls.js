@@ -5,7 +5,6 @@ import { useState, useContext } from 'react';
 //context
 import { Context } from '../context/Context';
 
-
 const Controls = ({ isSearching, setIsSearching }) => {
 
     const context = useContext(Context)
@@ -141,7 +140,6 @@ const Controls = ({ isSearching, setIsSearching }) => {
                 return true
             }
         })
-        console.log(filteredArr);
         dispatch({ type: 'SET_SEARCH_VALUE', payload: filteredArr })
         //dispatch({ type: 'SET_DATA', payload: filteredArr })
         dispatch({ type: 'SET_IS_LOADING', payload: false })

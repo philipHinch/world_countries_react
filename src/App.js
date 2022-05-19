@@ -4,8 +4,9 @@ import './App.css';
 import Controls from './components/Controls';
 import CountriesContainer from './components/CountriesContainer';
 import Header from './components/Header';
-//context
+//hooks
 import { useContext, useEffect, useState } from 'react';
+//context
 import { Context } from './context/Context';
 
 function App() {
@@ -15,8 +16,6 @@ function App() {
   const { dispatch, data, isDarkTheme, isLoading } = context
 
   const [isSearching, setIsSearching] = useState(false)
-
-  //////////////////test start
 
   //get data on page load 
   useEffect(() => {
@@ -61,9 +60,6 @@ function App() {
     let sortedNewArr = formattedData.sort((a, b) => b.name < a.name ? 1 : -1)
     return sortedNewArr
   }
-
-  //////////////////////////test end
-
 
   return (
     <div className="App">

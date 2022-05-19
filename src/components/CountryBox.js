@@ -1,7 +1,6 @@
 //icons
 import { Icon } from '@iconify/react';
 
-
 const CountryBox = ({ name, capital, area, population, region, flag }) => {
 
     return (
