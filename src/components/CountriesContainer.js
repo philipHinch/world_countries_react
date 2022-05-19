@@ -1,5 +1,6 @@
 //components
 import CountryBox from "./CountryBox";
+import Spinner from "./Spinner";
 //context
 import { Context } from "../context/Context";
 //hooks
@@ -33,7 +34,7 @@ const CountriesContainer = () => {
             {!isLoading && data.map(country => (
                 <CountryBox key={country.name} name={country.name} capital={country.capital} area={country.area} population={country.population} region={country.region} flag={country.flags.svg} />
             ))}
-            {isLoading && <h2 className='loadingText'>Loading...</h2>}
+            {isLoading && <Spinner />}
         </main>
     );
 }

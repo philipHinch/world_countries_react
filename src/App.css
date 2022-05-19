@@ -116,6 +116,9 @@ input:focus{
     text-align: center;
     margin-bottom: 50px;
 }
+#searchInput::placeholder{
+    opacity: 0.4;
+}
 .controlsButtonsContainer{
     display: flex;
 }
@@ -193,14 +196,14 @@ input:focus{
     min-width: 200px;
     min-height: 195px;
     max-height: 295px;
-    opacity: 0.1;
+    opacity: 0.08;
     overflow: hidden !important;
     transform: rotate(20deg);
     transition: all 0.2s ease-in-out;
 }
-.box:hover .flagOverlay{
+/* .box:hover .flagOverlay{
     opacity: 0.6;
-}
+} */
 .flagOverlay img{
     width: 100%;
 }
@@ -210,17 +213,18 @@ input:focus{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 400px;
+    min-width: 200px;
     font-size: 1.2rem;
 }
 .countryName{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     margin-right: 250px;
     /* background-color: #98FF98; */
     width: 100%;
     font-size: 1.8rem;
+    background-color: white;
 }
 .countryCapital{
     display: flex;
@@ -235,8 +239,6 @@ input:focus{
     opacity: 0.6;
     font-weight: 700;
     margin-top: 5px;
-
-
 }
 .countryArea{
     display: flex;
@@ -244,7 +246,6 @@ input:focus{
     opacity: 0.6;
     font-weight: 700;
     margin-top: 5px;
-
 }
 .countryRegion{
     display: flex;
@@ -260,6 +261,17 @@ input:focus{
     margin-left:10px;
     color: var(--medium-green);
     color: var(--black);
+}
+/* spinner */
+.loadingSpinnerContainer {
+    width: 200px;
+    height: 100%;
+    padding: 80px 0;
+    overflow: visible;
+}
+.loadingSpinnerContainer svg {
+    width: 100%;
+    animation: spinner 1s infinite ease-in-out;
 }
 
 /* animations */
@@ -280,10 +292,22 @@ input:focus{
 
     }
 }
+@keyframes spinner {
+    100%{
+        transform: rotate(360deg);
+
+    }
+}
 /* media queries */
 @media(max-width:1200px){
     .container{
         width: 100%;
+    }
+    .countriesContainer{
+        overflow: hidden;
+    }
+    .box{
+        -webkit-transform-origin:center;
     }
 }
 

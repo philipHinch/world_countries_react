@@ -11,7 +11,7 @@ const Controls = () => {
     return (
         <form className="controlsForm" onSubmit={(e) => e.preventDefault()}>
             <div className="innerControlsForm">
-                <input type="text" name="searchInput" id="searchInput" />
+                <input type="text" name="searchInput" id="searchInput" placeholder='Search...' />
                 <div className="controlsButtonsContainer">
                     <button className="btn nameBtn">name <Icon className='arrowIcon nameArrowIcon' icon="bx:arrow-from-top" />
                     </button>
