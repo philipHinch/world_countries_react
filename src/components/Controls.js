@@ -14,9 +14,11 @@ const Controls = () => {
 
     const [isSortedAZ, setIsSortedAZ] = useState(true)
     const [isSortedCapital, setIsSortedCapital] = useState(false)
+    const [isSortedPopulation, setIsSortedPopulation] = useState(false)
+    const [isSortedArea, setIsSortedArea] = useState(false)
     const [isGrid, setIsGrid] = useState(false)
 
-    //sort countries either from az or za
+    //sort countries name either from az or za
     const sortByName = () => {
         dispatch({ type: 'SET_IS_LOADING', payload: true })
         let sortedArr
@@ -54,6 +56,48 @@ const Controls = () => {
         dispatch({ type: 'SET_IS_LOADING', payload: false })
     }
 
+    //sort countries by population
+    const sortByPopulation = () => {
+        dispatch({ type: 'SET_IS_LOADING', payload: true })
+        let sortedArr
+        if (isSortedPopulation) {
+            setIsSortedPopulation(false)
+            sortedArr = data.sort((a, b) => {
+                return b.population < a.population ? 1 : -1
+            })
+
+        } else {
+            setIsSortedPopulation(true)
+            sortedArr = data.sort((a, b) => {
+                return a.population < b.population ? 1 : -1
+            })
+        }
+        dispatch({ type: 'SET_DATA', payload: sortedArr })
+        dispatch({ type: 'SET_IS_LOADING', payload: false })
+    }
+
+    //sort countries by area
+    const sortByArea = () => {
+        dispatch({ type: 'SET_IS_LOADING', payload: true })
+        let sortedArr
+        if (isSortedArea) {
+            setIsSortedArea(false)
+            sortedArr = data.sort((a, b) => {
+                return b.area < a.area ? 1 : -1
+            })
+
+        } else {
+            setIsSortedArea(true)
+            sortedArr = data.sort((a, b) => {
+                return a.area < b.area ? 1 : -1
+            })
+        }
+        dispatch({ type: 'SET_DATA', payload: sortedArr })
+        dispatch({ type: 'SET_IS_LOADING', payload: false })
+    }
+
+
+
     return (
         <form className="controlsForm" onSubmit={(e) => e.preventDefault()}>
             <div className="innerControlsForm">
@@ -63,9 +107,9 @@ const Controls = () => {
                     </button>
                     <button className="btn capitalBtn" onClick={sortByCapital}>capital <Icon className={`arrowIcon capitalArrowIcon ${ !isSortedCapital ? 'rotate180' : '' }`} icon="bx:arrow-from-top" />
                     </button>
-                    <button className="btn populationBtn">population <Icon className='arrowIcon populationArrowIcon' icon="bx:arrow-from-top" />
+                    <button className="btn populationBtn" onClick={sortByPopulation}>population <Icon className={`arrowIcon populationArrowIcon ${ !isSortedPopulation ? 'rotate180' : '' }`} icon="bx:arrow-from-top" />
                     </button>
-                    <button className="btn areaBtn">area <Icon className='arrowIcon populationArrowIcon' icon="bx:arrow-from-top" />
+                    <button className="btn areaBtn" onClick={sortByArea}>area <Icon className={`arrowIcon populationArrowIcon ${ !isSortedArea ? 'rotate180' : '' }`} icon="bx:arrow-from-top" />
                     </button>
                 </div>
             </div>

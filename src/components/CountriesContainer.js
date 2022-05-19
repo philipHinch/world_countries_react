@@ -46,6 +46,9 @@ const CountriesContainer = () => {
             if (!item.capital) {
                 item.capital = 'N/A'
             }
+            if (!item.area) {
+                item.area = 0
+            }
         })
         //sort the original data (original data is not sorted properly)
         let sortedNewArr = formattedData.sort((a, b) => b.name < a.name ? 1 : -1)

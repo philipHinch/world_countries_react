@@ -19,7 +19,7 @@ const CountryBox = ({ name, capital, area, population, region, flag }) => {
                 </div>
                 <div className="countryArea" title='Area'>
                     <small><Icon className='countryAreaIcon' icon="bx:area" /></small>
-                    <small>{area && area.toLocaleString()} km&sup2;</small>
+                    <small>{area === 0 ? 'N/A' : area.toLocaleString() + ' ' + 'km²'}</small>
                 </div>
                 <div className="countryPopulation" title='Population'>
                     <small><Icon className='countryPopulationIcon' icon="fluent:people-team-28-filled" /></small>
