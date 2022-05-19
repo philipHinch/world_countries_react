@@ -89,6 +89,9 @@ input:focus{
 .rotate180{
     transform: rotate(180deg);
 }
+.noResults{
+    font-size: 1.3rem;
+}
 /* header */
 .mainTitle{
     font-size: 3rem;
