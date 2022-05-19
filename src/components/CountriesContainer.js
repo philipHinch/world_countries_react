@@ -58,15 +58,19 @@ const CountriesContainer = ({ isSearching }) => {
 
     return (
         <main className="countriesContainer">
-            {searchValue.length < 1 && <p className="noResults">No Results</p>}
-            {!isLoading && !isSearching && data.map(country => (
-                <CountryBox key={country.name} name={country.name} capital={country.capital} area={country.area} population={country.population} region={country.region} flag={country.flags.svg} />
-            ))}
-            {!isLoading && isSearching && searchValue.map(country => (
-                <CountryBox key={country.name} name={country.name} capital={country.capital} area={country.area} population={country.population} region={country.region} flag={country.flags.svg} />
-            ))}
+            {isSearching && searchValue.length === 0 && <p className="noResults">No Results</p>}
+            {
+                !isLoading && !isSearching && data.map(country => (
+                    <CountryBox key={country.name} name={country.name} capital={country.capital} area={country.area} population={country.population} region={country.region} flag={country.flags.svg} />
+                ))
+            }
+            {
+                !isLoading && isSearching && searchValue.map(country => (
+                    <CountryBox key={country.name} name={country.name} capital={country.capital} area={country.area} population={country.population} region={country.region} flag={country.flags.svg} />
+                ))
+            }
             {isLoading && <Spinner />}
-        </main>
+        </main >
     );
 }
 

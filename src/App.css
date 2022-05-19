@@ -131,11 +131,14 @@ input:focus{
 }
 .controlsButtonsContainer button{
     margin-right: 5px;
-    background-color: var(--light-green);
+    background-color: var(--mintcream);
     transition: all 0.2s ease-in-out;
 }
 .controlsButtonsContainer button:hover{
-    background-color: var(--mintcream);
+    background-color: var(--light-green);
+}
+.activeBtn{
+    background-color: var(--light-green) !important;
 }
 .layoutIcon{
     position: absolute;

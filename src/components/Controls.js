@@ -16,10 +16,14 @@ const Controls = ({ isSearching, setIsSearching }) => {
     const [isSortedPopulation, setIsSortedPopulation] = useState(false)
     const [isSortedArea, setIsSortedArea] = useState(false)
     const [isGrid, setIsGrid] = useState(false)
+    const [activeButton, setActiveButton] = useState(0)
 
     //sort countries name either from az or za
     const sortByName = () => {
+        //set loading
         dispatch({ type: 'SET_IS_LOADING', payload: true })
+        //set active button
+        setActiveButton(0)
         let sortedArr
         let arr = isSearching ? searchValue : data
         if (isSortedAZ) {
@@ -43,7 +47,10 @@ const Controls = ({ isSearching, setIsSearching }) => {
 
     //sort countires by capital from az or za
     const sortByCapital = () => {
+        //set loading
         dispatch({ type: 'SET_IS_LOADING', payload: true })
+        //set active button
+        setActiveButton(1)
         let sortedArr
         let arr = isSearching ? searchValue : data
         if (isSortedCapital) {
@@ -67,7 +74,10 @@ const Controls = ({ isSearching, setIsSearching }) => {
 
     //sort countries by population
     const sortByPopulation = () => {
+        //set loading
         dispatch({ type: 'SET_IS_LOADING', payload: true })
+        //set active button
+        setActiveButton(2)
         let sortedArr
         let arr = isSearching ? searchValue : data
         if (isSortedPopulation) {
@@ -91,7 +101,10 @@ const Controls = ({ isSearching, setIsSearching }) => {
 
     //sort countries by area
     const sortByArea = () => {
+        //set loading
         dispatch({ type: 'SET_IS_LOADING', payload: true })
+        //set active button
+        setActiveButton(3)
         let sortedArr
         let arr = isSearching ? searchValue : data
         if (isSortedArea) {
@@ -139,13 +152,13 @@ const Controls = ({ isSearching, setIsSearching }) => {
             <div className="innerControlsForm">
                 <input type="text" name="searchInput" id="searchInput" placeholder='Search...' onChange={handleSearch} />
                 <div className="controlsButtonsContainer">
-                    <button className="btn nameBtn" onClick={sortByName}>name <Icon className={`arrowIcon nameArrowIcon ${ !isSortedAZ ? 'rotate180' : '' }`} icon="bx:arrow-from-top" />
+                    <button className={`btn nameBtn ${ activeButton === 0 && 'activeBtn' }`} onClick={sortByName}>name <Icon className={`arrowIcon nameArrowIcon ${ !isSortedAZ ? 'rotate180' : '' }`} icon="bx:arrow-from-top" />
                     </button>
-                    <button className="btn capitalBtn" onClick={sortByCapital}>capital <Icon className={`arrowIcon capitalArrowIcon ${ !isSortedCapital ? 'rotate180' : '' }`} icon="bx:arrow-from-top" />
+                    <button className={`btn capitalBtn ${ activeButton === 1 && 'activeBtn' }`} onClick={sortByCapital}>capital <Icon className={`arrowIcon capitalArrowIcon ${ !isSortedCapital ? 'rotate180' : '' }`} icon="bx:arrow-from-top" />
                     </button>
-                    <button className="btn populationBtn" onClick={sortByPopulation}>population <Icon className={`arrowIcon populationArrowIcon ${ !isSortedPopulation ? 'rotate180' : '' }`} icon="bx:arrow-from-top" />
+                    <button className={`btn populationBtn ${ activeButton === 2 && 'activeBtn' }`} onClick={sortByPopulation}>population <Icon className={`arrowIcon populationArrowIcon ${ !isSortedPopulation ? 'rotate180' : '' }`} icon="bx:arrow-from-top" />
                     </button>
-                    <button className="btn areaBtn" onClick={sortByArea}>area <Icon className={`arrowIcon populationArrowIcon ${ !isSortedArea ? 'rotate180' : '' }`} icon="bx:arrow-from-top" />
+                    <button className={`btn areaBtn ${ activeButton === 3 && 'activeBtn' }`} onClick={sortByArea}>area <Icon className={`arrowIcon populationArrowIcon ${ !isSortedArea ? 'rotate180' : '' }`} icon="bx:arrow-from-top" />
                     </button>
                 </div>
             </div>
