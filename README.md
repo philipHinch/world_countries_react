@@ -25,13 +25,13 @@ LINK
 
 ![This is an image](https://raw.githubusercontent.com/philipHinch/underline/main/underline.png)
 
-Grid Layout
+Grid Layout:
 ![This is an image](https://github.com/philipHinch/world_countries_react/blob/main/src/assets/previews/preview_large_grid.jpg?raw=true)
-Row Layout
+Row Layout:
 ![This is an image](https://github.com/philipHinch/world_countries_react/blob/main/src/assets/previews/preview_large_row.jpg?raw=true)
-Ipad Layout
+Ipad Layout:
 ![This is an image](https://github.com/philipHinch/world_countries_react/blob/main/src/assets/previews/preview_medium.jpg?raw=true)
-Mobile Layout
+Mobile Layout:
 ![This is an image](https://github.com/philipHinch/world_countries_react/blob/main/src/assets/previews/preview_small.jpg?raw=true)
 
 
