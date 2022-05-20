@@ -28,7 +28,7 @@ LINK
 ![This is an image](https://github.com/philipHinch/world_countries_react/blob/main/src/assets/previews/preview_medium.jpg?raw=true)
 ![This is an image](https://github.com/philipHinch/world_countries_react/blob/main/src/assets/previews/preview_small.jpg?raw=true)
 
-[View Project](https://philiphinchsliff.vercel.app/](https://world-countries-react.vercel.app/)
+[View Project]([https://philiphinchsliff.vercel.app/](https://world-countries-react.vercel.app/])
 
 
 
