@@ -367,7 +367,7 @@ input:focus{
 /* media queries */
 @media(max-width:1200px){
     .container{
-        width: 98%;
+        width: 100%;
     }
     .countriesContainer{
         overflow: hidden;
