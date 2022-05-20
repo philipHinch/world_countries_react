@@ -5,7 +5,7 @@ import { useState, useContext } from 'react';
 //context
 import { Context } from '../context/Context';
 
-const Controls = ({ isSearching, setIsSearching }) => {
+const Controls = ({ isSearching, setIsSearching, isGrid, setIsGrid }) => {
 
     const context = useContext(Context)
     const { dispatch, data, searchValue } = context
@@ -14,8 +14,9 @@ const Controls = ({ isSearching, setIsSearching }) => {
     const [isSortedCapital, setIsSortedCapital] = useState(false)
     const [isSortedPopulation, setIsSortedPopulation] = useState(false)
     const [isSortedArea, setIsSortedArea] = useState(false)
-    const [isGrid, setIsGrid] = useState(false)
     const [activeButton, setActiveButton] = useState(0)
+
+    ////// ADD THE TOTAL NUMBER OF COUNTRIES FOUND //////
 
     //sort countries name either from az or za
     const sortByName = () => {
@@ -161,8 +162,8 @@ const Controls = ({ isSearching, setIsSearching }) => {
                 </div>
             </div>
             {isGrid
-                ? <Icon className='layoutIcon' icon="akar-icons:grid" onClick={() => setIsGrid(!isGrid)} />
-                : <Icon className='layoutIcon' icon="mi:three-rows" onClick={() => setIsGrid(!isGrid)} />
+                ? <Icon className='layoutIcon' icon="mi:three-rows" onClick={() => setIsGrid(!isGrid)} />
+                : <Icon className='layoutIcon' icon="akar-icons:grid" onClick={() => setIsGrid(!isGrid)} />
             }
         </form>
     );

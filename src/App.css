@@ -29,7 +29,7 @@ body{
     font-family: var(--open-sans);
     background-color: var(--mintcream);
 }
-body::after{
+/* body::after{
     content: '';
     position: fixed;
     top: 0;
@@ -41,16 +41,17 @@ body::after{
     opacity: 0.1;
     background-image: radial-gradient(circle at center center, #AAF0D1, #F5FFFA), repeating-radial-gradient(circle at center center, #AAF0D1, #AAF0D1, 20px, transparent 40px, transparent 20px);
     background-blend-mode: multiply;
-}
+} */
 .container{
-    background-color: var(--white);
+    /* background-color: var(--white); */
+    background-color: white;
     height: 100%;
     margin: 0 auto;
-    width: 80%;
+    width: 85%;
     max-width: 1920px;
-    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     animation: fadeIn 0.5s ease-in-out;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
 }
 button{
     display: flex;
@@ -159,6 +160,7 @@ input:focus{
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom:100px ;
+    padding-top:10px ;
 }
 /* box */
 .box{
@@ -168,11 +170,13 @@ input:focus{
     width: 100%;
     overflow: hidden;
     background-color: white;
-    border-top: 2px solid #e6e6e6;
+    /* border: 2px solid #e6e6e6; */
     transition: all 0.1s ease-in-out;
     cursor: pointer;
     -webkit-transform-origin:bottom right;
     animation: fadeIn 0.2s ease-in-out forwards;
+    margin-bottom: 20px;
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.2) !important;
     /* animation: fadeIn 5s ease-in-out;
     animation: slideIn 0.5s ease-in-out;
     -webkit-animation-name: fadeIn, slideIn;
@@ -194,11 +198,14 @@ input:focus{
     min-height: 195px;
     max-height: 195px;
     border-right: 1px solid var(--black);
+
 }
 .flagContainer img{
     vertical-align: middle;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+
 }
 .flagOverlay{
     position: absolute;
@@ -298,7 +305,44 @@ input:focus{
     width: 100%;
     animation: spinner 1s infinite ease-in-out;
 }
+/* grid styles */
+.grid{
+    flex-direction: row;
+    gap: 20px;
+    /* display: grid; */
+    /* grid-template-columns: repeat(2,1fr); */
+}
+.boxGrid{
+    flex-direction: column;
+    height: 480px;
+    width: 300px;
+    /* width: 30%; */
+    /* border-left: 2px solid #e6e6e6; */
+}
+.boxGrid .flagContainer{
+    /* margin: auto; */
+    flex: 1;
 
+    width: 100%;
+    max-width: 300px;
+    max-height: none;
+    min-width: none;
+    min-height: none;
+    border: none;
+    border-bottom: 2px solid #ccc;
+}
+.boxGrid .countryInfo{
+    flex: 1;
+    margin: 10px auto;    
+}
+.boxGrid .countryName{
+    flex: 1;
+    text-align: center;
+
+}
+.flagOverlayGrid{
+    display: none;
+}
 /* animations */
 @keyframes fadeIn {
     100%{
@@ -323,7 +367,7 @@ input:focus{
 /* media queries */
 @media(max-width:1200px){
     .container{
-        width: 100%;
+        width: 98%;
     }
     .countriesContainer{
         overflow: hidden;

@@ -16,6 +16,7 @@ function App() {
   const { dispatch, data, isDarkTheme, isLoading } = context
 
   const [isSearching, setIsSearching] = useState(false)
+  const [isGrid, setIsGrid] = useState(false)
 
   //get data on page load 
   useEffect(() => {
@@ -65,8 +66,8 @@ function App() {
     <div className="App">
       <div className="container">
         <Header />
-        <Controls setIsSearching={setIsSearching} isSearching={isSearching} getCountriesData={getCountriesData} formatData={formatData} />
-        <CountriesContainer isSearching={isSearching} />
+        <Controls setIsSearching={setIsSearching} isSearching={isSearching} getCountriesData={getCountriesData} formatData={formatData} isGrid={isGrid} setIsGrid={setIsGrid} />
+        <CountriesContainer isSearching={isSearching} isGrid={isGrid} setIsGrid={setIsGrid} />
       </div>
     </div>
   );
