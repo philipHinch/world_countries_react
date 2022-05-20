@@ -141,6 +141,12 @@ input:focus{
 .activeBtn{
     background-color: var(--light-green) !important;
 }
+.totalResults{
+    font-size: 0.9rem;
+    padding-top: 20px;
+    font-weight:bold ;
+    opacity: 0.5;
+}
 .layoutIcon{
     position: absolute;
     bottom: 20px;
@@ -162,6 +168,7 @@ input:focus{
     margin-bottom:100px ;
     padding-top:10px ;
     padding: 0 10px;
+    padding-bottom: 20px;
 }
 /* box */
 .box{

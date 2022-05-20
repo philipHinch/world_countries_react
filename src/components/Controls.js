@@ -1,7 +1,7 @@
 //icons
 import { Icon } from '@iconify/react';
 //hooks
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 //context
 import { Context } from '../context/Context';
 
@@ -15,8 +15,13 @@ const Controls = ({ isSearching, setIsSearching, isGrid, setIsGrid }) => {
     const [isSortedPopulation, setIsSortedPopulation] = useState(false)
     const [isSortedArea, setIsSortedArea] = useState(false)
     const [activeButton, setActiveButton] = useState(0)
+    const [totalResults, setTotalResults] = useState(0)
 
-    ////// ADD THE TOTAL NUMBER OF COUNTRIES FOUND //////
+    useEffect(() => {
+        if (data) {
+            !searchValue ? setTotalResults(data.length) : setTotalResults(searchValue.length)
+        }
+    }, [data, searchValue])
 
     //sort countries name either from az or za
     const sortByName = () => {
@@ -137,7 +142,7 @@ const Controls = ({ isSearching, setIsSearching, isGrid, setIsGrid }) => {
             setIsSearching(true)
         }
         let filteredArr = data.filter(country => {
-            if (country.name.toLowerCase().includes(word)) {
+            if (country.name.toLowerCase().includes(word) || country.capital.toLowerCase().includes(word) || country.region.toLowerCase().includes(word)) {
                 return true
             }
         })
@@ -161,6 +166,7 @@ const Controls = ({ isSearching, setIsSearching, isGrid, setIsGrid }) => {
                     </button>
                 </div>
             </div>
+            <div className="totalResults">{totalResults} {totalResults > 2 ? 'Results' : 'Result'}</div>
             {/* temporary solution for grid button not showing on small screens */}
             {window.innerWidth < 700 ? '' : isGrid
                 ? <Icon className='layoutIcon' icon="mi:three-rows" onClick={() => setIsGrid(!isGrid)} />
