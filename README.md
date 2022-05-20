@@ -2,11 +2,9 @@
 
 This app will display all the information of all the countries in the world. You can sort them by name, population, area and capital. Clicking on the country will display extra information.
 
-This is a remake of my vanilla javascript world-countries app I did a while ago.
+This is a remake of my vanilla javascript world-countries app I did a while ago. [View Repo](https://github.com/philipHinch/world-countries)
 
-[View Old Project Repo](https://github.com/philipHinch/world-countries)
-&nbsp;
-[View New Project](https://world-countries-react.vercel.app/)
+[View Project](https://world-countries-react.vercel.app/)
 
 ![This is an image](https://raw.githubusercontent.com/philipHinch/underline/main/underline.png)
 
