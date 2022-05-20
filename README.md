@@ -23,7 +23,8 @@ LINK
 
 - Do not modify original data. I found out that filtering the original data and then saving it back to context was not a good idea.
 
----
+![This is an image](https://raw.githubusercontent.com/philipHinch/underline/main/underline.png)
+
 Grid Layout
 ![This is an image](https://github.com/philipHinch/world_countries_react/blob/main/src/assets/previews/preview_large_grid.jpg?raw=true)
 Row Layout
