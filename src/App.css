@@ -79,8 +79,10 @@ input:focus{
     border-color:var(--medium-green) ;
 }
 .arrowIcon{
-    margin-left: 10px;
+    /* margin-left: 10px; */
+    margin-left: auto;
     font-size: 1.3rem;
+    color: #666;
 }
 .loadingText{
     text-transform: uppercase;
@@ -380,7 +382,7 @@ input:focus{
         width: 100%;
     }
     .countriesContainer{
-        overflow: hidden;
+        /* overflow: hidden; */
     }
     .box{
         -webkit-transform-origin:center;
@@ -412,4 +414,40 @@ input:focus{
         margin-bottom: 0px;
     }
 }
+@media(max-width:400px){
+    .controlsButtonsContainer button{
+        font-size: 0.7rem;
+    }
+    .box{
+        height: 320px;
+    }
+    .flagContainer{
+        min-height: 120px;
+    }
+    .flagContainer img{
+        object-fit: contain;
+        object-fit: cover;
+    }
+    .countryInfo{
+        font-size: 0.9rem;
+    }
+    .countryInfo small{
+        width: 100%;
+    }
+    .countryIcon{
+        font-size: 1.2rem;
+    }
+    .countryName{
+        font-size: 1.2rem;
+    }
+    .countryCapital,.countryArea,.countryPopulation,.countryRegion{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    #searchInput{
+        font-size: 1rem;
+    }
 
+}

@@ -154,7 +154,7 @@ const Controls = ({ isSearching, setIsSearching, isGrid, setIsGrid }) => {
     return (
         <form className="controlsForm" onSubmit={(e) => e.preventDefault()}>
             <div className="innerControlsForm">
-                <input type="text" name="searchInput" id="searchInput" placeholder='Search...' onChange={handleSearch} />
+                <input type="text" name="searchInput" id="searchInput" placeholder='Search...' onChange={handleSearch} autoFocus />
                 <div className="controlsButtonsContainer">
                     <button className={`btn nameBtn ${ activeButton === 0 && 'activeBtn' }`} onClick={sortByName}>name <Icon className={`arrowIcon nameArrowIcon ${ !isSortedAZ ? 'rotate180' : '' }`} icon="bx:arrow-from-top" />
                     </button>
