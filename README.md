@@ -10,12 +10,12 @@ LINK
 
 ## Technologies used:
 
-- react hooks
-- usecontext and usereducer
-- high order functions
-- fetch api
-- asynchronus programming
-- css animations
+- React Hooks
+- useContext,useReducer, useState
+- High order functions (sort, filter, map)
+- Fetch API
+- Asynchronus Programming
+- CSS Animations
 
 ![This is an image](https://raw.githubusercontent.com/philipHinch/underline/main/underline.png)
 
