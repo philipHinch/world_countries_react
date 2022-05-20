@@ -4,15 +4,21 @@ import Spinner from "./Spinner";
 //context
 import { Context } from "../context/Context";
 //hooks
-import { useContext } from "react";
+import { useContext, useEffect, useState, useLayoutEffect } from "react";
 
 const CountriesContainer = ({ isSearching, isGrid, setIsGrid }) => {
 
     const context = useContext(Context)
     const { data, searchValue, isLoading } = context
 
+    useEffect(() => {
+        if (window.innerWidth < 700) {
+            setIsGrid(true)
+        }
+    }, [])
+
     return (
-        <main className={`countriesContainer ${ isGrid && 'grid' }`}>
+        <main className={`countriesContainer ${ isGrid ? 'grid' : '' }`}>
             {isSearching && searchValue.length === 0 && <p className="noResults">No Results</p>}
             {
                 !isLoading && !isSearching && data.map(country => (

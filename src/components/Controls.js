@@ -161,7 +161,8 @@ const Controls = ({ isSearching, setIsSearching, isGrid, setIsGrid }) => {
                     </button>
                 </div>
             </div>
-            {isGrid
+            {/* temporary solution for grid button not showing on small screens */}
+            {window.innerWidth < 700 ? '' : isGrid
                 ? <Icon className='layoutIcon' icon="mi:three-rows" onClick={() => setIsGrid(!isGrid)} />
                 : <Icon className='layoutIcon' icon="akar-icons:grid" onClick={() => setIsGrid(!isGrid)} />
             }

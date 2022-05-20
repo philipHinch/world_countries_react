@@ -4,8 +4,8 @@ import { Icon } from '@iconify/react';
 const CountryBox = ({ name, capital, area, population, region, flag, isGrid }) => {
 
     return (
-        <div className={`countryBox box ${ isGrid && 'boxGrid' }`}>
-            <div className={`flagOverlay ${ isGrid && 'flagOverlayGrid' }`}>
+        <div className={`countryBox box ${ isGrid ? 'boxGrid' : '' }`}>
+            <div className={`flagOverlay ${ isGrid ? 'flagOverlayGrid' : '' }`}>
                 <img src={flag} alt={name + ' ' + 'overlay flag'} />
             </div>
             <div className="flagContainer">
