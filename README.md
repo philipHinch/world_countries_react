@@ -12,7 +12,7 @@ This is a remake of my vanilla javascript world-countries app I did a while ago.
 
 - React Hooks
 - useContext,useReducer, useState
-- High order functions (sort, filter, map)
+- High Order Functions (sort, filter, map)
 - Fetch API
 - Asynchronus Programming
 - CSS Animations
