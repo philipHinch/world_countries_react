@@ -382,6 +382,9 @@ input:focus{
     }
 }
 @media(max-width:600px){
+    .mainTitle{
+        font-size: 1.9rem;
+    }
     .controlsForm{
         padding:  20px 0 20px 0;
     }
