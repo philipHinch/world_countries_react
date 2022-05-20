@@ -29,7 +29,7 @@ LINK
 ![This is an image](https://github.com/philipHinch/world_countries_react/blob/main/src/assets/previews/preview_small.jpg?raw=true)
 
 
-[View Project]([https://www.google.com](https://philiphinchsliff.vercel.app/](https://world-countries-react.vercel.app))
+[View Project](https://world-countries-react.vercel.app/)
 
 
 
