@@ -27,7 +27,8 @@ function App() {
   const getCountriesData = async () => {
     try {
       //get data
-      const res = await fetch(`${ process.env.REACT_APP_ENDPOINT }`)
+      //const res = await fetch(`${ process.env.REACT_APP_ENDPOINT }`)
+      const res = await fetch(`https://restcountries.com/v2/all`)
       const data = await res.json()
       //format data
       const newData = formatData(data)
