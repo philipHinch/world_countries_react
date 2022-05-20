@@ -23,9 +23,14 @@ LINK
 
 - Do not modify original data. I found out that filtering the original data and then saving it back to context was not a good idea.
 
+---
+Grid Layout
 ![This is an image](https://github.com/philipHinch/world_countries_react/blob/main/src/assets/previews/preview_large_grid.jpg?raw=true)
+Row Layout
 ![This is an image](https://github.com/philipHinch/world_countries_react/blob/main/src/assets/previews/preview_large_row.jpg?raw=true)
+Ipad Layout
 ![This is an image](https://github.com/philipHinch/world_countries_react/blob/main/src/assets/previews/preview_medium.jpg?raw=true)
+Mobile Layout
 ![This is an image](https://github.com/philipHinch/world_countries_react/blob/main/src/assets/previews/preview_small.jpg?raw=true)
 
 
