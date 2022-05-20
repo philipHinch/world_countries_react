@@ -129,7 +129,7 @@ const Controls = ({ isSearching, setIsSearching, isGrid, setIsGrid }) => {
     //search countries
     const handleSearch = async (e) => {
         dispatch({ type: 'SET_IS_LOADING', payload: true })
-        let word = e.target.value
+        let word = e.target.value.toLowerCase()
         //set if searching or not
         if (word.length === 0) {
             setIsSearching(false)
