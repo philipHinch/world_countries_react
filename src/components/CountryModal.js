@@ -31,7 +31,7 @@ const CountryModal = ({ setShowModal }) => {
 
     //close modal on close icon click
     const handleClick = (e) => {
-        if (e.target.className === 'countryModalContainer' || e.target.tagName === 'path' || e.target.id === 'closeIcon') {
+        if (e.target.className === 'countryModalContainer' || e.target.id === 'closeIcon' || e.target.parentElement.id === 'closeIcon') {
             setShowModal(false)
         }
     }
