@@ -73,9 +73,10 @@ const CountryModal = ({ setShowModal }) => {
                 </div>
                 <div className="modalCountryInfoContainer3">
                     <small title='Currencies'><Icon icon="ep:money" className='moneyIcon' /></small>
-                    {currencies.map(cur => (
+                    {currencies && currencies.map(cur => (
                         <small className="currencyName" key={cur.code} title='Currency'>{'{' + ' ' + cur.symbol + ' ' + '}' + ' ' + cur.name}</small>
                     ))}
+                    {!currencies && <small className="currencyName" title='Currency'>N/A</small>}
                 </div>
                 <div className="modalCountryInfoContainer4">
                     <small title='Timezones'><Icon icon="akar-icons:clock" className='timezoneIcon' /></small>
