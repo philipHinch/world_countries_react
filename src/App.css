@@ -50,6 +50,7 @@ body{
     height: 100%;
     margin: 0 auto;
     width: 85%;
+    /* width: 90%; */
     max-width: 1920px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     animation: fadeIn 0.5s ease-in-out;
@@ -517,6 +518,20 @@ input:focus{
 }
 .modalCountryIcon{
     margin-right: 15px;
+}
+/* footer */
+footer{
+    text-align: center;
+    padding: 10px;
+}
+footer a{
+    color: var(--medium-green);
+    color: var(--black);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+footer a:hover{
+    color: var(--medium-green);
 }
 /* animations */
 @keyframes fadeIn {

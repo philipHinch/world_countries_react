@@ -11,6 +11,7 @@ import { Context } from './context/Context';
 import CountryModal from './components/CountryModal';
 //icons
 import { Icon } from '@iconify/react';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -91,6 +92,7 @@ function App() {
         {showModal && <CountryModal setShowModal={setShowModal} />}
         {goToTop && !showModal && <a href='#'><Icon className='goToTop' title='Go To Top' icon="bi:arrow-up-square-fill" /></a>}
       </div>
+      <Footer />
     </div>
   );
 }
