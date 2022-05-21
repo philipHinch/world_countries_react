@@ -30,7 +30,8 @@ const CountryBox = ({ name, capital, area, population, region, flag, countryCode
     }
 
     const handleClick = (e) => {
-        if (e.target.parentElement.id === countryCode || e.target.parentElement.parentElement.id === countryCode || e.target.parentElement.parentElement.parentElement.id === countryCode) {
+        console.log(e.target);
+        if (e.target.id === countryCode || e.target.parentElement.id === countryCode || e.target.parentElement.parentElement.id === countryCode || e.target.parentElement.parentElement.parentElement.id === countryCode) {
             setShowModal(true)
             //send modal data to context
             dispatch({ type: 'SET_MODAL_DATA', payload: modalObj })
