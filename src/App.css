@@ -599,6 +599,10 @@ footer a:hover{
     }
 }
 @media(max-width:400px){
+    .innerCountryModal{
+        /* width: 95%; */
+        width: 90%;
+    }
     .controlsButtonsContainer button{
         font-size: 0.7rem;
     }
