@@ -1,10 +1,44 @@
 //icons
 import { Icon } from '@iconify/react';
+//hooks
+import { useContext } from 'react';
+//context
+import { Context } from '../context/Context';
 
-const CountryBox = ({ name, capital, area, population, region, flag, isGrid }) => {
+const CountryBox = ({ name, capital, area, population, region, flag, countryCode, latlng, timezones, currencies, languages, nativeName, independent, subregion, borders, isGrid, setShowModal }) => {
+
+    const context = useContext(Context)
+    const { dispatch } = context
+
+    //create modal object
+    const modalObj = {
+        name,
+        capital,
+        area,
+        population,
+        region,
+        flag,
+        countryCode,
+        latlng,
+        timezones,
+        currencies,
+        languages,
+        nativeName,
+        independent,
+        subregion,
+        borders
+    }
+
+    const handleClick = (e) => {
+        if (e.target.parentElement.id === countryCode || e.target.parentElement.parentElement.id === countryCode || e.target.parentElement.parentElement.parentElement.id === countryCode) {
+            setShowModal(true)
+            //send modal data to context
+            dispatch({ type: 'SET_MODAL_DATA', payload: modalObj })
+        }
+    }
 
     return (
-        <div className={`countryBox box ${ isGrid ? 'boxGrid' : '' }`}>
+        <div className={`countryBox box ${ isGrid ? 'boxGrid' : '' }`} onClick={handleClick} id={countryCode}>
             <div className={`flagOverlay ${ isGrid ? 'flagOverlayGrid' : '' }`}>
                 <img src={flag} alt={name + ' ' + 'overlay flag'} />
             </div>

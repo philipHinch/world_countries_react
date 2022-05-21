@@ -9,6 +9,7 @@ export const ContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(Reducer,
         {
             data: null,
+            modal_data: null,
             searchValue: null,
             isLoading: true,
             isDarkTheme: false

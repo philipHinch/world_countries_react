@@ -22,6 +22,7 @@
 h1, h2, h3, h4, h5, h6{
     font-family: var(--skranji);
 }
+
 body{
     color: var(--black);
     font-size: 1.1rem;
@@ -354,6 +355,131 @@ input:focus{
 }
 .flagOverlayGrid{
     display: none;
+}
+/* country modal */
+.countryModalContainer{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* backdrop-filter: blur(2px); */
+    animation: fadeIn 0.2s ease-in-out forwards;
+
+}
+.innerCountryModal{
+    position: relative;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    width: 85%;
+    max-width: 1920px;
+    height: 90%;
+    opacity: 0;
+    padding: 50px;
+    text-align: center;
+    overflow-y: scroll;
+    background-color: var(--white);
+    animation: fadeIn 0.2s ease-in-out forwards;
+}
+.closeIcon{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+.closeIcon:hover{
+    color: var(--medium-green);
+}
+.modalFlagContainer{
+    max-width: 300px;
+    min-width: 100px;
+    margin: 0 auto;
+    border: 1px solid var(--black);
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); */
+
+}
+.modalFlagContainer img{
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+.modalCountryName{
+    margin: 50px 0;
+}
+.modalCountryInfoContainer1{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+.modalCountryInfoContainer2{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.modalCountryInfoContainer3{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.modalCountryInfoContainer4{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+.modalCountryInfoContainer5{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.currencyName,.timezone{
+    margin-right: 15px;
+    /* margin-left: auto; */
+}
+.coordinate{
+    margin-right: 15px;
+}
+.languageIcon,.moneyIcon, .timezoneIcon, .coordinateIcon{
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+.coordinateIcon{
+    color: crimson;
+}
+.timezoneIcon{
+    color: blueviolet;
+}
+.languageIcon{
+    color: salmon;
+}
+.moneyIcon{
+    color: darkgreen;
+}
+.languageText,.currencyName{
+    margin-right: 15px;
+}
+.modalCountryCapital,.modalCountryArea,.modalCountryPopulation,.modalCountryRegion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.modalCountryIcon{
+    margin-right: 15px;
 }
 /* animations */
 @keyframes fadeIn {

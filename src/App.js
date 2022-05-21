@@ -8,6 +8,7 @@ import Header from './components/Header';
 import { useContext, useEffect, useState } from 'react';
 //context
 import { Context } from './context/Context';
+import CountryModal from './components/CountryModal';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
 
   const [isSearching, setIsSearching] = useState(false)
   const [isGrid, setIsGrid] = useState(false)
+  const [showModal, setShowModal] = useState(false)
 
   //get data on page load 
   useEffect(() => {
@@ -63,12 +65,18 @@ function App() {
     return sortedNewArr
   }
 
+  //hides scroll bar when slide menu is open
+  useEffect(() => {
+    showModal ? document.body.style.overflowY = "hidden" : document.body.style.overflowY = "scroll"
+  }, [showModal])
+
   return (
     <div className="App">
       <div className="container">
         <Header />
         <Controls setIsSearching={setIsSearching} isSearching={isSearching} getCountriesData={getCountriesData} formatData={formatData} isGrid={isGrid} setIsGrid={setIsGrid} />
-        <CountriesContainer isSearching={isSearching} isGrid={isGrid} setIsGrid={setIsGrid} />
+        <CountriesContainer isSearching={isSearching} isGrid={isGrid} setIsGrid={setIsGrid} setShowModal={setShowModal} />
+        {showModal && <CountryModal setShowModal={setShowModal} />}
       </div>
     </div>
   );
