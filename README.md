@@ -6,6 +6,8 @@ This is a remake of my vanilla javascript world-countries app I did a while ago.
 
 [View Project](https://world-countries-react.vercel.app/)
 
+Inspired by [Asabeneh - world-countries-data](https://github.com/Asabeneh/world-countries-data)
+
 ![This is an image](https://raw.githubusercontent.com/philipHinch/underline/main/underline.png)
 
 ## Technologies used:
