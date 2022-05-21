@@ -327,7 +327,7 @@ input:focus{
 }
 .boxGrid{
     flex-direction: column;
-    height: 480px;
+    height: 380px !important;
     width: 300px;
     /* width: 30%; */
     /* border-left: 2px solid #e6e6e6; */
@@ -341,6 +341,7 @@ input:focus{
     max-height: none;
     min-width: none;
     min-height: none;
+    min-height: 180px;
     border: none;
     border-bottom: 2px solid #ccc;
 }
