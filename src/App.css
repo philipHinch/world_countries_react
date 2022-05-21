@@ -387,8 +387,26 @@ input:focus{
     padding: 50px;
     text-align: center;
     overflow-y: scroll;
+    font-weight: bold;
+    font-size: 1.4rem;
+    box-shadow:  0 0 40px 10px rgba(0, 0, 0, 0.3);
     background-color: var(--white);
     animation: fadeIn 0.2s ease-in-out forwards;
+}
+.innerCountryModalOverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.1;
+}
+.innerCountryModalOverlay img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
 }
 .closeIcon{
     position: absolute;
@@ -541,6 +559,12 @@ input:focus{
     }
     .controlsButtonsContainer .areaBtn{
         margin-bottom: 0px;
+    }
+    .innerCountryModal{
+        font-size: 1.1rem;
+    }
+    .innerCountryModalOverlay img{
+        height: 130%;
     }
 }
 @media(max-width:400px){

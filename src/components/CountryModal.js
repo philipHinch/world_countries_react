@@ -39,6 +39,9 @@ const CountryModal = ({ setShowModal }) => {
     return (
         <div className="countryModalContainer" onClick={handleClick}>
             <div className="innerCountryModal">
+                <div className="innerCountryModalOverlay">
+                    <img src={flag} alt="flag overlay" />
+                </div>
                 <Icon className='closeIcon' id='closeIcon' icon="ep:close-bold" onClick={handleClick} />
                 <div className="modalFlagContainer">
                     <img src={flag} alt={name + ' ' + 'Flag'} />
