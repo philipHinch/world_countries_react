@@ -13,6 +13,7 @@ Inspired by [Asabeneh - world-countries-data](https://github.com/Asabeneh/world-
 ## Technologies used:
 
 - React Hooks
+- Mapbox GL JS
 - useContext,useReducer, useState
 - High Order Functions (sort, filter, map)
 - Fetch API
