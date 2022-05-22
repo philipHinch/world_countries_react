@@ -1,6 +1,6 @@
 # World Countries React
 
-This app will display all the information of all the countries in the world. You can sort them by name, population, area and capital. Clicking on the country will display extra information.
+This app will display all the information of all the countries in the world. You can sort them by name, population, area and capital. Clicking on the country will display extra information. Choose to display the countries between grid-view or row-view in desktop. 
 
 This is a remake of my vanilla javascript world-countries app I did a while ago. [Here](https://github.com/philipHinch/world-countries).
 
