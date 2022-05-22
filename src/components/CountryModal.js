@@ -47,44 +47,42 @@ const CountryModal = ({ setShowModal }) => {
                     <img src={flag} alt={name + ' ' + 'Flag'} />
                 </div>
                 <h2 className="modalCountryName">{name + ' ' + '(' + nativeName + ')'}</h2>
-                <div className="modalCountryInfoContainer1">
-                    <div className="modalCountryCapital" title='Capital'>
-                        <small><Icon className='countryCapitalIcon countryIcon modalCountryIcon' icon="map:city-hall" /></small>
-                        <small>{capital}</small>
-                    </div>
-                    <div className="modalCountryArea" title='Area'>
-                        <small><Icon className='countryAreaIcon countryIcon modalCountryIcon' icon="bx:area" /></small>
-                        <small>{area === 0 ? 'N/A' : area.toLocaleString() + ' ' + 'km²'}</small>
-                    </div>
-                    <div className="modalCountryPopulation" title='Population'>
-                        <small><Icon className='countryPopulationIcon countryIcon modalCountryIcon' icon="fluent:people-team-28-filled" /></small>
-                        <small>{population.toLocaleString()}</small>
-                    </div>
-                    <div className="modalCountryRegion" title='Region'>
-                        <small><Icon className='countryRegionIcon countryIcon modalCountryIcon' icon="bx:world" /></small>
-                        <small>{region + ',' + ' ' + subregion}</small>
-                    </div>
+                <div className="modalCountryInfoContainer1" title='Capital'>
+                    <small><Icon className='countryCapitalIconModal countryIcon modalCountryIcon' icon="map:city-hall" /></small>
+                    <small>{capital}</small>
                 </div>
-                <div className="modalCountryInfoContainer2">
+                <div className="modalCountryInfoContainer2" title='Area'>
+                    <small><Icon className='countryAreaIconModal countryIcon modalCountryIcon' icon="bx:area" /></small>
+                    <small>{area === 0 ? 'N/A' : area.toLocaleString() + ' ' + 'km²'}</small>
+                </div>
+                <div className="modalCountryInfoContainer3" title='Population'>
+                    <small><Icon className='countryPopulationIconModal countryIcon modalCountryIcon' icon="fluent:people-team-28-filled" /></small>
+                    <small>{population.toLocaleString()}</small>
+                </div>
+                <div className="modalCountryInfoContainer4" title='Region'>
+                    <small><Icon className='countryRegionIconModal countryIcon modalCountryIcon' icon="bx:world" /></small>
+                    <small>{region + ',' + ' ' + subregion}</small>
+                </div>
+                <div className="modalCountryInfoContainer5">
                     <small title='Languages'><Icon icon="emojione-monotone:speaking-head" className='languageIcon' /></small>
                     {languages.map(lang => (
                         <small className="languageText" key={lang.iso639_1} title='Language'>{lang.name}</small>
                     ))}
                 </div>
-                <div className="modalCountryInfoContainer3">
+                <div className="modalCountryInfoContainer6">
                     <small title='Currencies'><Icon icon="ep:money" className='moneyIcon' /></small>
                     {currencies && currencies.map(cur => (
                         <small className="currencyName" key={cur.code} title='Currency'>{'{' + ' ' + cur.symbol + ' ' + '}' + ' ' + cur.name}</small>
                     ))}
                     {!currencies && <small className="currencyName" title='Currency'>N/A</small>}
                 </div>
-                <div className="modalCountryInfoContainer4">
+                <div className="modalCountryInfoContainer7">
                     <small title='Timezones'><Icon icon="akar-icons:clock" className='timezoneIcon' /></small>
                     {timezones.map(zone => (
                         <small className="timezone" key={zone} title='Timezone'>{zone}</small>
                     ))}
                 </div>
-                <div className="modalCountryInfoContainer5">
+                <div className="modalCountryInfoContainer8">
                     <small title='Latitude/Longitude'><Icon icon="foundation:marker" className='coordinateIcon' /></small>
                     {latlng.map(coord => (
                         <small className="coordinate" key={coord} title='Coordinate'>{coord.toFixed(6)}</small>
