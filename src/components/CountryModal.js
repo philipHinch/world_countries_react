@@ -1,11 +1,25 @@
 //icons
 import { Icon } from '@iconify/react';
 //hooks
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 //context
 import { Context } from '../context/Context';
+//mapbox
+import Map, { NavigationControl, GeolocateControl } from 'react-map-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
+
 
 const CountryModal = ({ setShowModal }) => {
+
+    const [geoLocation, setGeoLocation] = useState(null)
+
+    //set geolocation data on page load
+    useEffect(() => {
+        setGeoLocation({
+            lat: latlng[0],
+            lon: latlng[1]
+        })
+    }, [])
 
     //get modal data from context
     const context = useContext(Context)
@@ -88,6 +102,19 @@ const CountryModal = ({ setShowModal }) => {
                         <small className="coordinate" key={coord} title='Coordinate'>{coord.toFixed(6)}</small>
                     ))}
                 </div>
+                {geoLocation && <Map
+                    id='map'
+                    initialViewState={{
+                        longitude: geoLocation.lon,
+                        latitude: geoLocation.lat,
+                        zoom: 6,
+                    }}
+                    style={{ width: '100%', height: '300px', margin: 'auto', boxShadow: '0 0 4px rgba(0, 0, 0, 0.3)' }}
+                    mapStyle="mapbox://styles/mapbox/light-v10"
+                    mapboxAccessToken={'pk.eyJ1IjoicGhpbGlwaGluY2giLCJhIjoiY2wyZGs0YXZpMDFmcTNibGVvOGdzZDYxcSJ9.ecKPBqnCinWoLzMB-yjhtA'}>
+                    <NavigationControl />
+                    {/* <GeolocateControl /> */}
+                </Map >}
             </div>
         </div>
     );
