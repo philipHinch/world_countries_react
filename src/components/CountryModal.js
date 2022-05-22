@@ -111,7 +111,7 @@ const CountryModal = ({ setShowModal }) => {
                     }}
                     style={{ width: '100%', height: '300px', margin: 'auto', boxShadow: '0 0 4px rgba(0, 0, 0, 0.3)' }}
                     mapStyle="mapbox://styles/mapbox/light-v10"
-                    mapboxAccessToken='pk.eyJ1IjoicGhpbGlwaGluY2giLCJhIjoiY2wyZGs0YXZpMDFmcTNibGVvOGdzZDYxcSJ9.ecKPBqnCinWoLzMB-yjhtA'>
+                    mapboxAccessToken='pk.eyJ1IjoicGhpbGlwaGluY2giLCJhIjoiY2wzaDkzaXQzMG11ajNkdDVqZjlyNzM5bCJ9.-j4gQ4HOhxE8uCrDW3-fDw'>
                     <NavigationControl />
                     {/* <GeolocateControl /> */}
                 </Map >}
