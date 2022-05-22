@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.4.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "mapbox-gl": "^2.8.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-map-gl": "^7.0.13",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -25,9 +28,12 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      ">0.2%, not dead",
+      "not ie 11",
+      "not chrome < 51",
+      "not safari < 10",
+      "not android < 51"
+
     ],
     "development": [
       "last 1 chrome version",
