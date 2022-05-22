@@ -404,8 +404,9 @@ input:focus{
     padding: 50px;
     text-align: center;
     overflow-y: scroll;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 1.4rem;
+    border: 1px solid #666;
     box-shadow:  0 0 40px 10px rgba(0, 0, 0, 0.3);
     background-color: var(--white);
     animation: fadeIn 0.2s ease-in-out forwards;
@@ -453,48 +454,40 @@ input:focus{
 .modalCountryName{
     margin: 50px 0;
 }
-.modalCountryInfoContainer1{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    
-}
-.modalCountryInfoContainer2{
+.modalCountryInfoContainer1,.modalCountryInfoContainer2,.modalCountryInfoContainer3,.modalCountryInfoContainer4,.modalCountryInfoContainer5,.modalCountryInfoContainer6,.modalCountryInfoContainer7,.modalCountryInfoContainer8{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-.modalCountryInfoContainer3{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-.modalCountryInfoContainer4{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0;
-}
-.modalCountryInfoContainer5{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-.currencyName,.timezone{
-    margin-right: 15px;
-    /* margin-left: auto; */
-}
-.coordinate{
-    margin-right: 15px;
+    justify-content: space-between;
+    width: 40%;
+    min-width: 300px;
+    /* background-color: #d1ef8c; */
+    margin: 20px auto;
+    padding: 5px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255,0.8) !important;
 }
 .languageIcon,.moneyIcon, .timezoneIcon, .coordinateIcon{
     margin-right: 15px;
     font-size: 1.5rem;
+}
+.countryCapitalIconModal{
+    font-size: 1.5rem;
+    color: rgb(255, 204, 0);
+    stroke-width: 1px;
+    stroke: #666;
+}
+.countryAreaIconModal{
+    font-size: 1.5rem;
+    color: dodgerblue;
+}
+.countryPopulationIconModal{
+    font-size: 1.5rem;
+    color: darkred;
+}
+.countryRegionIconModal{
+    font-size: 1.5rem;
+    color: #3EB489;
 }
 .coordinateIcon{
     color: crimson;
@@ -596,7 +589,17 @@ footer a:hover{
         font-size: 1.1rem;
     }
     .innerCountryModalOverlay img{
-        height: 130%;
+        height: 135%;
+    }
+}
+@media(max-width:500px){
+    .modalCountryInfoContainer1,.modalCountryInfoContainer2,.modalCountryInfoContainer3,.modalCountryInfoContainer4,.modalCountryInfoContainer5,.modalCountryInfoContainer6,.modalCountryInfoContainer7,.modalCountryInfoContainer8{
+        width: 100%;
+        flex-direction: column;
+        min-width: auto;
+    }
+    .modalCountryIcon{
+        margin: 0;
     }
 }
 @media(max-width:400px){
