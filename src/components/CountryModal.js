@@ -17,12 +17,27 @@ const CountryModal = ({ setShowModal }) => {
 
     //set geolocation data on page load
     useEffect(() => {
+        //set zoom level depending on area size
+        let zoom
+        if (area < 2000) {
+            zoom = 8
+        } else if (area < 50000) {
+            zoom = 6
+        } else if (area < 2000000) {
+            zoom = 5
+        } else if (area < 5000000) {
+            zoom = 4
+        } else if (area < 14000000) {
+            zoom = 3
+        } else {
+            zoom = 2
+        }
         //check if there are coordinates
         latlng
             ? setGeoLocation({
                 lat: latlng[0],
                 lon: latlng[1],
-                zoom: area < 2000 ? 8 : 6
+                zoom
             })
             : setGeoLocation({
                 lat: 0,
