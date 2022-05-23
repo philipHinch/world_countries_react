@@ -38,8 +38,11 @@ Mobile Layout:
 ![This is an image](https://github.com/philipHinch/world_countries_react/blob/main/src/assets/previews/preview_small.jpg?raw=true)
 Other:
 ![This is an image](https://github.com/philipHinch/world_countries_react/blob/main/src/assets/previews/world_countries_preview_large_modal1.png?raw=true)
+Other:
 ![This is an image](https://github.com/philipHinch/world_countries_react/blob/main/src/assets/previews/world_countries_preview_large_modal2.png?raw=true)
+Other:
 ![This is an image](https://github.com/philipHinch/world_countries_react/blob/main/src/assets/previews/smartmockups_l3hg77n0.jpg?raw=true)
+Other:
 ![This is an image](https://github.com/philipHinch/world_countries_react/blob/main/src/assets/previews/smartmockups_l3hg7htn.jpg?raw=true)
 
 
