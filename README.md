@@ -14,7 +14,7 @@ Inspired by [Asabeneh - world-countries-data](https://github.com/Asabeneh/world-
 
 - React Hooks
 - Mapbox GL JS
-- useContext,useReducer, useState
+- Context API
 - High Order Functions (sort, filter, map)
 - Fetch API
 - Asynchronus Programming
